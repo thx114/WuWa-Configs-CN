@@ -1,26 +1,28 @@
-# WuWa-Configs
+# 鸣潮配置
 
-## [Optional] Configs require mod in [releases](https://github.com/AlteriaX/WuWa-Configs/releases) to use some commands (list is in mod information)
+> ## [可选] 部分配置依赖一个模组: [releases](https://github.com/AlteriaX/WuWa-Configs/releases)   
+> ! 此模组直接为游戏添加了新代码，可能有封号风险，可以不装
 
-For explanations and image comparisons: [Link](https://docs.google.com/document/d/e/2PACX-1vTuIAInOasQNStOkxvBX2qj-SkX1V5us16VZxy5cSSLHlntAIip0avYopPqpgACuaGe9I-5fJrKIyl4/pub) | [Discord Server](https://discord.com/invite/JhtKDnu9MK)
+### 覆盖文件:
 
-Common folder contains:
+- ``Scalability.ini`` 
+  用来关闭一些后处理例如:
+  > 色差, 景深, 胶片颗粒, 暗角  
 
-``Scalability.ini`` to turn off post-processing effects such as:
-```
-Chromatic Abberation, Depth of Field, Film Grain, Vignette
-```
-
-``DeviceProfiles.ini`` to fix low quality material for laptops/desktops that has AMD iGPU + dedicated GPU active - **[CHECK THIS IMAGE](https://i.postimg.cc/W1jgWC4s/igpu.png)**
-```
-Material examples: Sanhua's necklace, bronze scale on Jinhsi's outift, water waves in Black Shores and more
-```
+  关闭这些效果可以显著提升性能，尤其适合低性能硬件或追求画质干净的玩家。
 
 
-Copy ``Engine.ini`` (choose one config) and other ini files to this location: 
+- ``DeviceProfiles.ini``   
+   解决某些 **核显独显** 同时启用时在材质显示上的低质量问题。-**[图片](https://i.postimg.cc/W1jgWC4s/igpu.png)**
+   > 某些材质（例如三花项链、金曦服饰上的铜鳞片、Black Shores 水波效果 等）可能显示模糊或质量较低。
+
+- ``Engine.ini`` (从下面选一个配置)
+
+---
+覆盖文件的文件夹在：
 > ..Wuthering Waves\Wuthering Waves Game\Client\Saved\Config\WindowsNoEditor
 
-| Config | NVIDIA                                                                            | AMD                                                                   | Intel                |
+| 配置 | NVIDIA                                                                            | AMD                                                                   | Intel                |
 |--------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------|
 | 1      | RTX 4090, 4080, 4070, 3090, 3080 Ti, 3080, 3070 Ti                                | RX 7900 XTX/XT/GRE, 7800 XT, 7700 XT, 6950 XT, 6900 XT, 6800 XT, 6800 |                      |
 | 2      | RTX 4060 Ti, 4060, 3070, 3060 Ti, 3060, 3050, 2080, 2070, 2060, GTX 1080 Ti, 1080 | RX 7600 XT, 6700 XT, 6700, 6650 XT, 6600 XT, 6600, 5700 XT, 5700      | A770, A750, A580     |
@@ -28,6 +30,10 @@ Copy ``Engine.ini`` (choose one config) and other ini files to this location:
 | 4      | RTX 2050, GTX 1650, 1050 Ti, 1050                                                 | RX 6400, 580 2048SP, 570, 560, 780M, 680M                             | A380, A310, Arc iGPU |
 | 5      | GT 1030, MX350/250/150                                                            | RX 550, Vega iGPU                                                     | Iris Xe              |
 
-References: [UE4.27 Commands](https://framedsc.com/GeneralGuides/ue4_commands.htm), [UE4 Documentation](https://docs.unrealengine.com/4.27/en-US/), UE Forum
+引用: [UE4.27 Commands](https://framedsc.com/GeneralGuides/ue4_commands.htm), [UE4 Documentation](https://docs.unrealengine.com/4.27/en-US/), UE Forum
+  
+   
+---
+原项目 https://github.com/AlteriaX/WuWa-Configs
 
 [<img src="https://i.imgur.com/fxmOE8N.png">](https://ko-fi.com/alteria/)
